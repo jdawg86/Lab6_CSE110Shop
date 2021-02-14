@@ -22,18 +22,19 @@ class ProductItem extends HTMLElement {
 
     const button = document.createElement('button');
     button.setAttribute('onclick',"alert('Added to Cart!')");
-    this.compareDocumentPosition.textContent = "Add to Cart";
+    button.setAttribute('id', 'cart')
+    button.textContent = "Add to Cart";
 
     const linkElem = document.createElement('link');
     linkElem.setAttribute('rel', 'stylesheet');
     linkElem.setAttribute('href', './styles/styles.css');
 
     shadow.appendChild(li);
-    li.appendChild(linkElem);
-    li.appendChild(img);
-    li.appendChild(title);
-    li.appendChild(price);
-    li.appendChild(button);
+    shadow.appendChild(linkElem);
+    shadow.appendChild(img);
+    shadow.appendChild(title);
+    shadow.appendChild(price);
+    shadow.appendChild(button);
   }
 }
 
